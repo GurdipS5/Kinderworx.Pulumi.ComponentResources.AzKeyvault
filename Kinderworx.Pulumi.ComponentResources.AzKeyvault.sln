@@ -10,7 +10,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EAB66E3-E38B-4D80-8E45-D6E91D607965}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.prettierrc = .prettierrc
+		commitlint.config.js = commitlint.config.js
+		Kinderworx.Pulumi.ComponentResources.AzKeyvault.ndproj = Kinderworx.Pulumi.ComponentResources.AzKeyvault.ndproj
 		package.json = package.json
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
