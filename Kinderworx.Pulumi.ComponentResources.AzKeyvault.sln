@@ -9,13 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.cspr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EAB66E3-E38B-4D80-8E45-D6E91D607965}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		.prettierrc = .prettierrc
+		.whitesource = .whitesource
+		CHANGELOG.md = CHANGELOG.md
+		CODEOWNERS.md = CODEOWNERS.md
 		commitlint.config.js = commitlint.config.js
+		gitguardian.yml = gitguardian.yml
 		Kinderworx.Pulumi.ComponentResources.AzKeyvault.ndproj = Kinderworx.Pulumi.ComponentResources.AzKeyvault.ndproj
+		package-lock.json = package-lock.json
 		package.json = package.json
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{19C87C23-8AFB-4EFE-84BD-B86B02C871FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

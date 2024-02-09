@@ -6,9 +6,13 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "readme-md-generator": "^1.0.0"
+    "readme-md-generator": "^1.0.0",
+    "remark-lint": "^9.1.2",
+    "write-good": "^1.0.8"
   },
   "devDependencies": {
+    "git-format-staged": "^3.0.0",
+    "husky": "^9.0.10",
     "prettier": "3.2.5"
   }
 }

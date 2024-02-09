@@ -1,23 +1,55 @@
-using System;
-using System.Linq;
 using Nuke.Common;
-using Nuke.Common.CI;
-using Nuke.Common.Execution;
-using Nuke.Common.IO;
-using Nuke.Common.ProjectModel;
-using Nuke.Common.Tooling;
-using Nuke.Common.Utilities.Collections;
-using static Nuke.Common.EnvironmentInfo;
-using static Nuke.Common.IO.FileSystemTasks;
-using static Nuke.Common.IO.PathConstruction;
 
 class Build : NukeBuild
 {
+    /// <summary>
     /// Support plugins are available for:
     ///   - JetBrains ReSharper        https://nuke.build/resharper
     ///   - JetBrains Rider            https://nuke.build/rider
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
+    /// </summary>
+
+
+    #region Secrets
+
+    ///
+    [Parameter]
+    [Secret]
+    readonly string SonarKey;
+
+    [Parameter]
+    [Secret]
+    readonly string SNYK_TOKEN;
+
+    [Parameter]
+    [Secret]
+    readonly string DTrackApiKey;
+
+    /// <summary>
+    ///  jkhuj
+    /// </summary>
+    [Parameter]
+    [Secret]
+    readonly string CodecovSecret;
+
+
+    /// <summary>
+    ///  ll
+    /// </summary>
+    [Parameter]
+    [Secret]
+    readonly string GitHubToken;
+
+
+    /// <summary>
+    ///  ProGet server key.
+    /// </summary>
+    [Parameter]
+    [Secret]
+    readonly string NuGetApiKey;
+
+    #endregion
 
     public static int Main () => Execute<Build>(x => x.Compile);
 
@@ -40,5 +72,11 @@ class Build : NukeBuild
         .Executes(() =>
         {
         });
+
+    Target PushToProGet => _ => _
+      .DependsOn(Restore)
+      .Executes(() =>
+      {
+      });
 
 }
